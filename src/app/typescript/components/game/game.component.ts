@@ -91,7 +91,7 @@ export class GameComponent extends  BaseComponent {
   }
 
   higherOrLowerClicked (selection: string) {
-    this.logger.error(this.componentName + ' > higherOrLowerClicked. selection is:: ', selection);
+    this.logger.log(this.componentName + ' > higherOrLowerClicked. selection is:: ', selection);
     let playerWins = (selection === this.APP_CONSTANTS.DECK_OF_CARDS.HIGHER) ?
                       Number(this.cards[1].value) > Number(this.cards[0].value) : // Player guessed 'Higher'
                       Number(this.cards[0].value) > Number(this.cards[1].value); // Player guessed 'Lower'

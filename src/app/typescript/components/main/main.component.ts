@@ -1,6 +1,6 @@
 import { Component }  from '@angular/core';
 import { Router    }  from '@angular/router';
-import { MdSnackBar, MdSnackBarConfig } from '@angular/material';
+import { MdSnackBar } from '@angular/material';
 
 import { Logger }    from  '../../shared/logger.service';
 
