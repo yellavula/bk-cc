@@ -5,9 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
-    "lint": "tslint \"src/**/*.ts\"",
-    "test": "ng test",
-    "pree2e": "webdriver-manager update",
+    "start:prod": "ng build --prod && ng serve --prod",
     "e2e": "protractor",
     "postinstall": "bower install"
   },
