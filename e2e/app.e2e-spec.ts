@@ -3,7 +3,7 @@ import { BkCcPage } from './app.po';
 
 import { AppConstants }    from  '../src/app/typescript/app.constants';
 
-describe('App component Specs', function() {
+describe('App component Specs - ', function() {
   let page: BkCcPage;
 
   beforeEach(() => {

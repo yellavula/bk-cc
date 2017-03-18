@@ -11,20 +11,37 @@
 
   <!--Buttons-->
   <md-card>
-    <button md-raised-button *ngIf="!showTryAgainButton" (click)="higherOrLowerClicked(APP_CONSTANTS.DECK_OF_CARDS.HIGHER)">{{APP_CONSTANTS.DECK_OF_CARDS.HIGHER}}</button>
-    <button md-raised-button *ngIf="!showTryAgainButton" (click)="higherOrLowerClicked(APP_CONSTANTS.DECK_OF_CARDS.LOWER)">{{APP_CONSTANTS.DECK_OF_CARDS.LOWER}}</button>
-    <button md-raised-button *ngIf="showTryAgainButton" (click)="tryAgainClicked()">{{APP_CONSTANTS.DECK_OF_CARDS.TRY_AGAIN}}</button>
+    <button md-raised-button
+            *ngIf="!showTryAgainButton"
+            id="higherButtonId"
+            (click)="higherOrLowerClicked(APP_CONSTANTS.DECK_OF_CARDS.HIGHER)">
+            {{APP_CONSTANTS.DECK_OF_CARDS.HIGHER}}
+    </button>
+    <button md-raised-button
+            *ngIf="!showTryAgainButton"
+            id="lowerButtonId"
+            (click)="higherOrLowerClicked(APP_CONSTANTS.DECK_OF_CARDS.LOWER)">
+            {{APP_CONSTANTS.DECK_OF_CARDS.LOWER}}
+    </button>
+    <button md-raised-button
+            id="tryAgainButtonId"
+            *ngIf="showTryAgainButton"
+            (click)="tryAgainClicked()">
+            {{APP_CONSTANTS.DECK_OF_CARDS.TRY_AGAIN}}
+    </button>
   </md-card>
 
   <!--Display Cards-->
   <div *ngIf="drawCardModel && drawCardModel.cards && drawCardModel.cards.length > 0">
     <md-card>
-      <h2>{{APP_CONSTANTS.DECK_OF_CARDS.DEALER_CARD}}</h2>
+      <h2 id="dealerCardLabel">{{APP_CONSTANTS.DECK_OF_CARDS.DEALER_CARD}}</h2>
       <img src="{{dealerCardImageSource}}"
+           id="dealerCardImageId"
            alt="Loading.."
            style="width:300px;height:400px;">
-      <h2>{{APP_CONSTANTS.DECK_OF_CARDS.PLAYER_CARD}}</h2>
+      <h2 id="userGuessYourCardLabel">{{APP_CONSTANTS.DECK_OF_CARDS.PLAYER_CARD}}</h2>
       <img src="{{playerCardImageSource}}"
+           id="playerCardImageId"
            alt="Loading.."
            style="width:300px;height:400px;">
     </md-card>

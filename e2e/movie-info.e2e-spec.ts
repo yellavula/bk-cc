@@ -3,7 +3,7 @@ import { BkCcPage } from './app.po';
 
 import { AppConstants }    from  '../src/app/typescript/app.constants';
 
-describe('Movie Component Specs', function() {
+describe('Movie Component Specs - ', function() {
   let page: BkCcPage;
 
   beforeEach(() => {
