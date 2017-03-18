@@ -1,0 +1,27 @@
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+
+  <md-toolbar color="primary">
+    <logo></logo>
+    <navigation [navOptions]="navOptions"
+                [selectedNavOption]="selectedNavOption"
+                (navOptionSelected)="navOptionSelected($event)">
+    </navigation>
+    <button md-button [md-menu-trigger-for]="menu">
+      SELECT APP THEME
+    </button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item (click)="isDarkTheme = true">Dark</button>
+      <button md-menu-item (click)="isDarkTheme = false">Light</button>
+    </md-menu>
+  </md-toolbar>
+
+  <div class="app-content">
+    <movie-info *ngIf="mode === NAV_OPTIONS.MOVIE"
+                (showToast)="showToast($event)">
+    </movie-info>
+    <game-component *ngIf="mode === NAV_OPTIONS.GAME"
+                    (showToast)="showToast($event)">
+    </game-component>
+  </div>
+
+</md-sidenav-layout>

@@ -1,0 +1,33 @@
+<md-card>
+  <!--Tool Bar-->
+  <md-toolbar color="primary">
+    Choose Higher or Lower
+  </md-toolbar>
+
+  <!--Progress Bar-->
+  <div [hidden]="hideInProgress">
+    <md-progress-bar mode="indeterminate"></md-progress-bar>
+  </div>
+
+  <!--Buttons-->
+  <md-card>
+    <button md-raised-button *ngIf="!showTryAgainButton" (click)="higherOrLowerClicked(APP_CONSTANTS.DECK_OF_CARDS.HIGHER)">{{APP_CONSTANTS.DECK_OF_CARDS.HIGHER}}</button>
+    <button md-raised-button *ngIf="!showTryAgainButton" (click)="higherOrLowerClicked(APP_CONSTANTS.DECK_OF_CARDS.LOWER)">{{APP_CONSTANTS.DECK_OF_CARDS.LOWER}}</button>
+    <button md-raised-button *ngIf="showTryAgainButton" (click)="tryAgainClicked()">{{APP_CONSTANTS.DECK_OF_CARDS.TRY_AGAIN}}</button>
+  </md-card>
+
+  <!--Display Cards-->
+  <div *ngIf="drawCardModel && drawCardModel.cards && drawCardModel.cards.length > 0">
+    <md-card>
+      <h2>{{APP_CONSTANTS.DECK_OF_CARDS.DEALER_CARD}}</h2>
+      <img src="{{dealerCardImageSource}}"
+           alt="Loading.."
+           style="width:300px;height:400px;">
+      <h2>{{APP_CONSTANTS.DECK_OF_CARDS.PLAYER_CARD}}</h2>
+      <img src="{{playerCardImageSource}}"
+           alt="Loading.."
+           style="width:300px;height:400px;">
+    </md-card>
+  </div>
+
+</md-card>

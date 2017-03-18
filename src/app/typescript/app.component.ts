@@ -1,0 +1,16 @@
+import { Component, ViewEncapsulation } from '@angular/core';
+
+// Add the RxJS Observable operators we need in this app.
+import './rxjs-operators';
+
+@Component({
+  selector: 'app-root',
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: [
+    '../stylesheets/components/app-component.styles.css'
+  ],
+  template: `<router-outlet></router-outlet>`
+})
+export class AppComponent {
+  title = 'Berkadia';
+}

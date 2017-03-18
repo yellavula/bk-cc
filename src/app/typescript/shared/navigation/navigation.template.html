@@ -1,0 +1,6 @@
+<md-tab-group [selectedIndex]="selectedNavOptionIndex"
+              (selectChange)="navOptionClicked($event)">
+  <md-tab *ngFor="let navOption of navOptions"
+          label="{{navOption}}">
+  </md-tab>
+</md-tab-group>
