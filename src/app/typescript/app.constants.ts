@@ -1,6 +1,14 @@
 // The file consists of all the constants (i.e. JSON objects, array values) throughout.
 
 export const AppConstants = {
+  APP_TITLE: {
+    TITLE: 'Berkadia'
+  },
+  APP_THEMES: {
+    SELECT_APP_THEME: 'SELECT APP THEME',
+    DARK: 'DARK',
+    LIGHT: 'LIGHT'
+  },
   navOptions: [
     'MOVIE',
     'GAME'
@@ -11,7 +19,12 @@ export const AppConstants = {
   },
   MOVIE: {
     MOVIE_NAME: 'If+Only',
-    MOVIE_ID: '15775'
+    MOVIE_NAME_ACTUAL: 'If Only',
+    MOVIE_ID: '15775',
+    MOVIE_INFO_TAB_HEADER: 'Movie Information'
+  },
+  GAME: {
+    CHOOSE_HIGHER_OR_LOWER: 'Choose Higher or Lower'
   },
   DECK_OF_CARDS: {
     COUNT: 2,

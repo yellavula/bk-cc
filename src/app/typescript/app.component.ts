@@ -1,5 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
+import { AppConstants }    from  './app.constants';
+
 // Add the RxJS Observable operators we need in this app.
 import './rxjs-operators';
 
@@ -12,5 +14,5 @@ import './rxjs-operators';
   template: `<router-outlet></router-outlet>`
 })
 export class AppComponent {
-  title = 'Berkadia';
+  title = AppConstants.APP_TITLE.TITLE;
 }

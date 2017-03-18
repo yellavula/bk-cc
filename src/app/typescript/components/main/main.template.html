@@ -1,17 +1,19 @@
 <md-sidenav-layout [class.m2app-dark]="isDarkTheme">
 
   <md-toolbar color="primary">
-    <logo></logo>
+    <logo
+      [appName]="APP_CONSTANTS.APP_TITLE.TITLE">
+    </logo>
     <navigation [navOptions]="navOptions"
                 [selectedNavOption]="selectedNavOption"
                 (navOptionSelected)="navOptionSelected($event)">
     </navigation>
-    <button md-button [md-menu-trigger-for]="menu">
-      SELECT APP THEME
+    <button md-button [md-menu-trigger-for]="menu" id="selectThemeId">
+      {{APP_CONSTANTS.APP_THEMES.SELECT_APP_THEME}}
     </button>
     <md-menu #menu="mdMenu">
-      <button md-menu-item (click)="isDarkTheme = true">Dark</button>
-      <button md-menu-item (click)="isDarkTheme = false">Light</button>
+      <button md-menu-item (click)="isDarkTheme = true">{{APP_CONSTANTS.APP_THEMES.DARK}}</button>
+      <button md-menu-item (click)="isDarkTheme = false">{{APP_CONSTANTS.APP_THEMES.LIGHT}}</button>
     </md-menu>
   </md-toolbar>
 

@@ -1,7 +1,7 @@
 <md-card>
   <!--Tool Bar-->
-  <md-toolbar color="primary">
-    Movie Information
+  <md-toolbar color="primary" id="movieInfoToolBarId">
+    {{APP_CONSTANTS.MOVIE.MOVIE_INFO_TAB_HEADER}}
   </md-toolbar>
 
   <!--Progress Bar-->
@@ -14,10 +14,10 @@
     <img src="{{posterImageSource}}"
          alt="Loading.."
          style="width:400px;height:500px;">
-    <h1>{{movieInfo.original_title}}</h1>
-    <h2>{{movieInfo.release_date | date : 'yyyy'}}</h2>
+    <h1 id="movieName">{{movieInfo.original_title}}</h1>
+    <h2 id="movieReleaseYear">{{movieInfo.release_date | date : 'yyyy'}}</h2>
     <h1 *ngIf="movieInfo && movieInfo.overview && movieInfo.overview.length > 0">Overview</h1>
-    <h2>{{movieInfo.overview}}</h2>
+    <h2 id="movieOverview">{{movieInfo.overview}}</h2>
   </md-card>
 
   <!--Movie Credits - Cast-->

@@ -7,7 +7,6 @@ import { Injectable }     from '@angular/core';
 @Injectable()
 export class LocalStorageService {
 
-  LOGGED_IN_USER = 'loggedInPlethyUser';
   LAST_DASHBOARD_TAB_SELECTED = 'lastDashboardTabSelected';
 
   constructor() {}
