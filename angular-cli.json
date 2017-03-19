@@ -20,9 +20,7 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [
-        "assets/bower_components/webcomponentsjs/webcomponents-lite.min.js"
-      ],
+      "scripts": [],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
@@ -37,11 +35,7 @@
       "config": "./protractor.conf.js"
     }
   },
-  "test": {
-    "karma": {
-      "config": "./karma.conf.js"
-    }
-  },
+  "test": {},
   "defaults": {
     "styleExt": "scss",
     "prefixInterfaces": false,
