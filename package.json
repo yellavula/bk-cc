@@ -6,8 +6,7 @@
   "scripts": {
     "start": "ng serve",
     "start:prod": "ng build --prod && ng serve --prod",
-    "e2e": "protractor",
-    "postinstall": "bower install"
+    "e2e": "protractor"
   },
   "private": true,
   "dependencies": {
