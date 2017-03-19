@@ -13,12 +13,14 @@
   <md-card>
     <button md-raised-button
             *ngIf="!showTryAgainButton"
+            [disabled]="!(drawCardModel && drawCardModel.cards && drawCardModel.cards.length > 0)"
             id="higherButtonId"
             (click)="higherOrLowerClicked(APP_CONSTANTS.DECK_OF_CARDS.HIGHER)">
             {{APP_CONSTANTS.DECK_OF_CARDS.HIGHER}}
     </button>
     <button md-raised-button
             *ngIf="!showTryAgainButton"
+            [disabled]="!(drawCardModel && drawCardModel.cards && drawCardModel.cards.length > 0)"
             id="lowerButtonId"
             (click)="higherOrLowerClicked(APP_CONSTANTS.DECK_OF_CARDS.LOWER)">
             {{APP_CONSTANTS.DECK_OF_CARDS.LOWER}}
