@@ -90,7 +90,7 @@ export class MoviesService extends BaseService {
     if (movieCreditsToReturn && movieCreditsToReturn.cast && movieCreditsToReturn.cast.length > 0) {
       for (let cast of movieCreditsToReturn.cast) {
         cast.profile_path = (cast.profile_path && cast.profile_path.length > 0) ?
-          this.urlBuilder.posterPathUrl + cast.profile_path :
+          this.urlBuilder.posterPathThumbnailUrl + cast.profile_path :
           this.urlBuilder.dummyPosterPathUrl;
         cast.tmdbProfilePath = cast.id ? this.urlBuilder.tmdbProfilePath + cast.id : '';
       }
@@ -99,7 +99,7 @@ export class MoviesService extends BaseService {
     if (movieCreditsToReturn && movieCreditsToReturn.crew && movieCreditsToReturn.crew.length > 0) {
       for (let crew of movieCreditsToReturn.crew) {
         crew.profile_path = (crew.profile_path && crew.profile_path.length > 0) ?
-          this.urlBuilder.posterPathUrl + crew.profile_path :
+          this.urlBuilder.posterPathThumbnailUrl + crew.profile_path :
           this.urlBuilder.dummyPosterPathUrl;
         crew.tmdbProfilePath = crew.id ? this.urlBuilder.tmdbProfilePath + crew.id : '';
       }

@@ -16,6 +16,7 @@ export class UrlBuilderService {
   private api_key_label: string = 'api_key';
   private api_key_value: string;
   public posterPathUrl: string = 'https://image.tmdb.org/t/p/original/';
+  public posterPathThumbnailUrl: string = 'https://image.tmdb.org/t/p/w264_and_h264_bestv2';
   public dummyPosterPathUrl: string = 'https://placeholdit.imgix.net/~text?txtsize=33&bg=cccccc&txtclr=ff0000';
   public dummyPosterGuessPathUrl: string = 'https://placeholdit.imgix.net/~text?txtsize=68&bg=ff0000&txtclr=cccccc';
   private credits: string = 'credits';
