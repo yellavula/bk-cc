@@ -91,7 +91,7 @@ export class MoviesService extends BaseService {
       for (let cast of movieCreditsToReturn.cast) {
         cast.profile_path = (cast.profile_path && cast.profile_path.length > 0) ?
           this.urlBuilder.posterPathThumbnailUrl + cast.profile_path :
-          this.urlBuilder.dummyPosterPathUrl;
+          this.urlBuilder.buildDummyPosterPathUrlWithText(this.buildInitials(cast.name));
         cast.tmdbProfilePath = cast.id ? this.urlBuilder.tmdbProfilePath + cast.id : '';
       }
     }
@@ -100,11 +100,24 @@ export class MoviesService extends BaseService {
       for (let crew of movieCreditsToReturn.crew) {
         crew.profile_path = (crew.profile_path && crew.profile_path.length > 0) ?
           this.urlBuilder.posterPathThumbnailUrl + crew.profile_path :
-          this.urlBuilder.dummyPosterPathUrl;
+          this.urlBuilder.buildDummyPosterPathUrlWithText(this.buildInitials(crew.name));
         crew.tmdbProfilePath = crew.id ? this.urlBuilder.tmdbProfilePath + crew.id : '';
       }
     }
     return movieCreditsToReturn;
+  }
+
+  buildInitials (name: string) {
+    if (name && name.length > 0) {
+      let nameArray = name.split(" ");
+      if (nameArray.length > 0) {
+        return (nameArray.length === 1) ?
+                nameArray[0].charAt(0).toUpperCase() :
+                nameArray[0].charAt(0).toUpperCase() + nameArray[ nameArray.length -1 ].charAt(0).toUpperCase();
+      }
+    } else {
+      return '';
+    }
   }
 }
 

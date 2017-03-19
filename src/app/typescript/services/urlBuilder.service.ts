@@ -86,4 +86,10 @@ export class UrlBuilderService {
     this.logger.log(this.componentName + 'getDrawCardsUrl()> ', drawCardsUrl);
     return drawCardsUrl;
   }
+
+  public buildDummyPosterPathUrlWithText (initials: string) {
+    let drawCardsUrl = this.dummyPosterPathUrl + '&txt=' + initials + '&w=99&h=99';
+    this.logger.log(this.componentName + 'getDrawCardsUrl()> ', drawCardsUrl);
+    return drawCardsUrl;
+  }
 }
