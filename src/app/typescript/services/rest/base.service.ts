@@ -18,10 +18,10 @@ export class BaseService {
   public STATUS_CODE_201: number = 201;
   public STATUS_CODE_500: number = 500;
 
-  constructor(private Http: Http, private plethyLogger: Logger, public navigatorSvc: NavigatorService) {
+  constructor(private Http: Http, private loggerService: Logger, public navigatorSvc: NavigatorService) {
     this.navigatorService = navigatorSvc;
     this.http = Http;
-    this.logger = plethyLogger;
+    this.logger = loggerService;
   }
 
   componentName = 'BaseService';

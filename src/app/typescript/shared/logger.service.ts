@@ -1,5 +1,5 @@
 /*
-  WeGuard Logger class to print console logs
+   Logger class to print console logs
 */
 
 import { Injectable }     from '@angular/core';
