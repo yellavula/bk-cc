@@ -2,8 +2,19 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.21.
 
+## Setup
+Make sure Node.js is installed.
+Please enter Administrator password if required for following steps.
+Install angular-cli globally. Run 'npm install -g angular-cli'
+Install webpack globally. Run 'npm install -g webpack'
+Install bower globally. Run 'npm install -g bower'
+From the root of the app, run 'npm i' or 'npm install'
+
+## Running the app
+From the root of the app. run 'npm start' or 'ng serve'
+
 ## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
