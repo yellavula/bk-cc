@@ -13,8 +13,8 @@ export class BaseComponent {
   public NAV_OPTIONS: any = this.APP_CONSTANTS.NAV_OPTIONS;
 
 
-  constructor(private WGLogger: Logger, public routerInput: Router) {
-    this.logger = WGLogger;
+  constructor(private loggerSvc: Logger, public routerInput: Router) {
+    this.logger = loggerSvc;
     this.localStorage = new LocalStorageService();
     this.router = routerInput;
   }
